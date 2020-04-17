@@ -1,19 +1,23 @@
 import React from "react";
+import { card } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText } from "reactstrap";
+
 
 const CharacterCard = props => {
 
     return (
 
-        <div>
-            <container>
-                <card>
+        <div className="personCard">
+            <Card>
+                <CardBody>
 
-                    <h4>My name is {props.name}</h4>
-                    <p>I am '{props.height}' cm tall</p>
-                    <p>I have {props.eyeColor} eye color</p>
-                    <p>and I was born in {props.birthdate} </p>
-                </card>
-            </container>
+                    <CardTitle>My name is {props.name}</CardTitle>
+                    <CardText>I am '{props.height}' cm tall</CardText>
+                    <CardText>I have {props.eyeColor} eye color</CardText>
+                    <CardText>and I was born in {props.birthdate}, </CardText>
+                    <CardText>I am a {props.gender} looking for love</CardText>
+                </CardBody>
+            </Card>
 
         </div>
 

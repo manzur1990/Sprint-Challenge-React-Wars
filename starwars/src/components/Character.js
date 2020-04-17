@@ -2,15 +2,22 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./CharacterCard"
 import CharacterCard from "./CharacterCard";
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
 
-// const Box = styled.div`
-//     box-sizing: border-box;
-//     display: flex;
-//     justify-content: space-evenly;
-//     flex-wrap: wrap;
-//   `
+const CharCont = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 40%;
+   
+
+
+`
+
+
+
 const Character = () => {
     const [characters, setCharacters] = useState([]);
 
@@ -30,25 +37,24 @@ const Character = () => {
 
     return (
 
-    <div>
+    <CharCont>
             {characters.map(item =>{
                 // console.log(item)
                 return (
                     
                     <CharacterCard
 
-                    
                     name = {item.name}
                     eyeColor = {item.eye_color}
                     height = {item.height}
                     birthdate = {item.birth_year}
-
+                    gender = {item.gender}
                     />
 
                 );
             })}
         
-    </div>
+    </CharCont>
 
     
 
