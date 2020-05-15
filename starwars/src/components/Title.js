@@ -1,11 +1,14 @@
-import React from 'react';
-// import { Title } from 'reactstrap';
+
+import React from 'react'
+import { Alert } from "reactstrap"
 
 const Title = () => {
     return (
         <div>
-            <h1>Star Tinder</h1>
-        </div>
+
+            <Alert color="secondary" style={{ fontSize: '40px', }}>Star Wars Dating App</Alert>
+        </div >
+
     );
 }
 
