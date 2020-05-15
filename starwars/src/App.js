@@ -1,7 +1,10 @@
+
 import React from 'react'
 import './App.css'
 import Character from "./components/Character"
 import Title from './components/Title'
+
+
 
 const App = () => {
 
@@ -9,6 +12,7 @@ const App = () => {
     <div className="App">
       <Title />
       <Character />
+
     </div>
   );
 }

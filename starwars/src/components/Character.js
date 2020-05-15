@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import axios from "axios"
 import CharacterCard from "./CharacterCard"
 import styled from 'styled-components'
@@ -20,6 +21,7 @@ const Character = () => {
     useEffect(() => {
 
         axios.get('https://swapi.py4e.com/api/people/')
+
             .then(res => {
                 console.log(res.data.results);
                 setCharacters(res.data.results)
@@ -29,9 +31,11 @@ const Character = () => {
                 console.log(err);
             });
 
+
     }, []);
 
     return (
+
 
         <CharCont>
             {characters.map(item => {
@@ -45,12 +49,15 @@ const Character = () => {
                         height={item.height}
                         birthdate={item.birth_year}
                         gender={item.gender}
+
                     />
 
                 );
             })}
 
+
         </CharCont>
+
 
 
 

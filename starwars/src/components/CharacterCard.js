@@ -1,11 +1,14 @@
+
 import React from "react"
 import { Card, CardBody, Alert, CardText } from "reactstrap"
+
 
 
 
 const CharacterCard = props => {
 
     return (
+
 
 
         <Card body inverse style={{
@@ -24,6 +27,7 @@ const CharacterCard = props => {
                 <CardText>I am a {(props.gender === 'n/a') ? 'robot' : props.gender} looking for love</CardText>
             </CardBody>
         </Card>
+
 
 
 
