@@ -1,10 +1,10 @@
 import React from 'react'
-
+import { Alert } from "reactstrap"
 
 const Title = () => {
     return (
         <div>
-            <h1>Star Tinder</h1>
+            <Alert color="secondary">Star Wars Dating App</Alert>
         </div>
     );
 }

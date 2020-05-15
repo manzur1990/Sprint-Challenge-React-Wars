@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
-import Card from "./CharacterCard"
 import CharacterCard from "./CharacterCard"
 import styled from 'styled-components'
 
@@ -39,6 +38,7 @@ const Character = () => {
 
                         name={item.name}
                         eyeColor={item.eye_color}
+                        hairColor={item.hair_color}
                         height={item.height}
                         birthdate={item.birth_year}
                         gender={item.gender}
