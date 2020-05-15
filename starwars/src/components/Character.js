@@ -7,7 +7,11 @@ import styled from 'styled-components'
 const CharCont = styled.div`
     display: flex; 
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-items: center;
+    flex-wrap: wrap-reverse;
+    width: 70%;
+    padding-left: 30%; 
+    
 `
 
 const Character = () => {
@@ -16,9 +20,9 @@ const Character = () => {
     useEffect(() => {
 
         axios.get('https://swapi.py4e.com/api/people/')
-            .then(response => {
-                console.log(response.data.results);
-                setCharacters(response.data.results)
+            .then(res => {
+                console.log(res.data.results);
+                setCharacters(res.data.results)
 
             })
             .catch(err => {
@@ -35,7 +39,6 @@ const Character = () => {
                 return (
 
                     <CharacterCard
-
                         name={item.name}
                         eyeColor={item.eye_color}
                         hairColor={item.hair_color}
